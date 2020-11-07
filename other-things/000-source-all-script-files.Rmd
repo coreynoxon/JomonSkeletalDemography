@@ -1,0 +1,61 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+The knitting started at `r Sys.time()`
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE)
+```
+
+```{r import-data }
+suppressWarnings(source('01-library-function-data-import.R'))
+```
+
+```{r prep-data}
+suppressWarnings(source('02-data-prep.R'))
+```
+
+```{r mcmc, eval=FALSE}
+suppressWarnings(source('03-analysis-aoristic-MCMC.R'))
+```
+
+```{r corr}
+suppressWarnings(source('04-correlation-analysis.R'))
+```
+
+```{r pithouse-plots}
+suppressWarnings(source('05-pithouse-count-plots.R'))
+```
+
+```{r multireg}
+suppressWarnings(source('06-multiple-variable-regressions.R'))
+```
+
+```{r floor-space}
+suppressWarnings(source('07-floor-space-regressions-by-type.R'))
+```
+
+```{r mainwall}
+suppressWarnings(source('08-main-vs-mainwall-type-comparison.R'))
+```
+
+```{r floor-boxplots}
+suppressWarnings(source('09-floor-space-boxplots-type-comparison.R'))
+```
+
+```{r save-plots}
+suppressWarnings(source('10-save-plots.R'))
+```
+
+```{r tables}
+suppressWarnings(source('11-tables.R'))
+```
+
+```{r extras}
+suppressWarnings(source('12-extras.R'))
+```
+
+The knitting ended at `r Sys.time()`

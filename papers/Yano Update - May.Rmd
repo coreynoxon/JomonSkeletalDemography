@@ -1,0 +1,97 @@
+---
+title: "Yano Update - May"
+author: "Corey Noxon"
+date: "5/7/2020"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Pithouse Length and Floor Space  
+
+I think I mentioned this before, but I found that pithouse length and pithouse area are well correlated.  
+The area measurement is derived in part from the pithouse length, so this makes sense of course.  
+There is some variation within the different pithouse types, but not much.  
+This plot shows several different pithouse measurements. Floor space is in the top left and pithouse length is the third plot down on the left.
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("figures/CombinedRegressions1000Multi.jpg"))
+```
+
+Here is the pithouse length and floor space correlations broken down by types.
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("figures/SpearmanLengthNewFloor1000Multi.jpg"))
+```
+
+Looking at the change over time, the trends are fairly similar.  
+This is the floor space regression.
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("figures/NewFloorPlot1000.jpg"))
+```
+
+And this is the pithouse length regression.
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("figures/PithouseLengthPlot1000.jpg"))
+```
+
+Do you think both pithouse length and pithouse floor space measures are needed?  
+I think the the length measurement is more direct and I am able to use it with more pithouses.  
+I think that I should include this explanation about floor space and pithouse length, but after explaining how close the measures are, I think it would be better to focus on pithouse length.
+
+## Box Plots
+
+I made boxplot versions of several measurements.  
+I wasn't sure if this would help to make the plots easier to understand.  
+For example, here is the pithouse length regression plot.
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("figures/CombinedTypeRegressionsLength1000Multi.jpg"))
+```
+
+And here is the same information but in boxplot form.
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("figures/LengthBoxPlotMulti1000.jpg"))
+```
+
+Here is what the individual regression for the Main type looks like.
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("figures/LengthPlotMain1000.jpg"))
+```
+
+And here is what the boxplot for the Main type looks like.
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("figures/LengthBoxPlotMain1000.jpg"))
+```
+
+Are the boxplots helpful for you? Do you think they should be included along with the regressions?
+
+
+## Skeletal Analysis Results
+
+I was able to complete my skeletal analysis focusing on the Kanto and Chubu region.
+
+This is the analysis using the general 15p5 ratio: subadults from 5 to 19 years old compared to the total population 5 years old and older. The upper left plot only includes data from the Middle Jomon period (5415 to 4395 calBP). All other data is filtered before the plot is made. The upper right includes all data, but basically "zooms in" to the Middle Jomon. This helps with edge effects and smooths out the regression. The lower left regression was made by extending the filtered range out 1000 years before and after the Middle Jomon (6415 to 3395 cal BP) and then "zoomed in" to the Middle Jomon Range. Again, this helps with edge effects. The lower right is the total of all skeletal data in the Kanto and Chubu regions. There is a huge amount of uncertainty before the Middle Jomon period and increased uncertainty afterwards. 
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("figures/Combined15p5.jpg"))
+```
+
+I also ran the analysis using the 5p0 ratio, the ratio of children under 5 compared to the total population.   
+The plot types are the same as above, only using 5p0 instead of 15p5.
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("figures/Combined5p0.jpg"))
+```
+
+I am searching to see if there is a way to directly compare the results of the skeletal analysis with the pithouse analysis.
+The plots can be placed side by side and visually compared, but I am trying to see if there is a way to compare them statistically. 
+
