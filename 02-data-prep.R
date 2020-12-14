@@ -106,3 +106,5 @@ temp_skeletalsummary <- skeletalsummary
 
 #add sampled column
 temp_skeletalsummary$sampled <- NA
+
+saveRDS(skeletalsummary, here::here("data/derived-data/skeletalsummary.rds"))

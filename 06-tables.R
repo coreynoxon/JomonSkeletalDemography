@@ -1,5 +1,8 @@
 ###11-tables
 #this section is set aside for the creation of tables
+sampleclean <- readRDS(here::here("data/derived-data/sampleclean.rds"))
+samplecleanround <- readRDS(here::here("data/derived-data/samplecleanround.rds"))
+skeletalsummary <- readRDS(here::here("data/derived-data/skeletalsummary.rds"))
 
 #Pithouse Type Counts per timeblock
 PithouseTypeTableData <- samplecleanround %>%

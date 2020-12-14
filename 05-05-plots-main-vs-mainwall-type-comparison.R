@@ -7,7 +7,7 @@ sampleclean_trim <- readRDS(here::here("data/derived-data/sampleclean_trim.rds")
 MeanDepthPlotMain1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean_depth) & PillarPosition == "Main"), 
                                 aes(x = -sampled, y = mean_depth, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Mean Depth - M-type") + xlab("Years calBP") + ylab("Depth (m)") +
+  ggtitle("Posthole Depth - M-type") + xlab("Years calBP") + ylab("Depth (m)") +
   xlim(5400,4400) +
   coord_cartesian(ylim = c(0.4,0.8)) +
   scale_x_reverse() +
@@ -17,7 +17,7 @@ MeanDepthPlotMain1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean_dept
 MeanDepthPlotMainWall1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean_depth) & PillarPosition == "MainWall"), 
                                     aes(x = -sampled, y = mean_depth, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Mean Depth - MW-type") + xlab("Years calBP") + ylab("Depth (m)") +
+  ggtitle("Posthole Depth - MW-type") + xlab("Years calBP") + ylab("Depth (m)") +
   xlim(5400,4400) +
   coord_cartesian(ylim = c(0.4,0.8)) +
   scale_x_reverse() +
@@ -28,7 +28,7 @@ MeanDepthPlotMainWall1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean_
 SDDepthPlotMain1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_depth) & PillarPosition == "Main"), 
                               aes(x = -sampled, y = sd_depth, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Post Depth SD - M-type") + xlab("Years calBP") + ylab("SD") +
+  ggtitle("Posthole Depth SD - M-type") + xlab("Years calBP") + ylab("SD") +
   xlim(5400,4400) +
   coord_cartesian(ylim = c(0,0.25)) +
   scale_x_reverse() +
@@ -38,7 +38,7 @@ SDDepthPlotMain1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_depth) &
 SDDepthPlotMainWall1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_depth) & PillarPosition == "MainWall"), 
                                   aes(x = -sampled, y = sd_depth, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Post Depth SD - MW-type") + xlab("Years calBP") + ylab("SD") +
+  ggtitle("Posthole Depth SD - MW-type") + xlab("Years calBP") + ylab("SD") +
   xlim(5400,4400) +
   coord_cartesian(ylim = c(0,0.25)) +
   scale_x_reverse() +
@@ -49,7 +49,7 @@ SDDepthPlotMainWall1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_dept
 MeanDiameterPlotMain1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean_diameter) & PillarPosition == "Main"), 
                                    aes(x = -sampled, y = mean_diameter, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Mean Diameter - M-type") + xlab("Years calBP") + ylab("Diameter (m)") +
+  ggtitle("Posthole Diameter - M-type") + xlab("Years calBP") + ylab("Diameter (m)") +
   xlim(5400,4400) +
   coord_cartesian(ylim = c(0.05,0.35)) +
   scale_x_reverse() +
@@ -59,7 +59,7 @@ MeanDiameterPlotMain1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean_d
 MeanDiameterPlotMainWall1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean_diameter) & PillarPosition == "MainWall"), 
                                        aes(x = -sampled, y = mean_diameter, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Mean Diameter - MW-type") + xlab("Years calBP") + ylab("Diameter (m)") +
+  ggtitle("Posthole Diameter - MW-type") + xlab("Years calBP") + ylab("Diameter (m)") +
   xlim(5400,4400) +
   coord_cartesian(ylim = c(0.05,0.35)) +
   scale_x_reverse() +
@@ -70,7 +70,7 @@ MeanDiameterPlotMainWall1000 <- ggplot(data = subset(sampleclean_trim, !is.na(me
 SDDiameterPlotMain1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_diameter) & PillarPosition == "Main"), 
                                  aes(x = -sampled, y = sd_diameter, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Post Diameter SD - M-type") + xlab("Years calBP") + ylab("SD") +
+  ggtitle("Posthole Diameter SD - M-type") + xlab("Years calBP") + ylab("SD") +
   xlim(5400,4400) +
   coord_cartesian(ylim = c(0.02,0.085)) +
   scale_x_reverse() +
@@ -80,7 +80,7 @@ SDDiameterPlotMain1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_diame
 SDDiameterPlotMainWall1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_diameter) & PillarPosition == "MainWall"), 
                                      aes(x = -sampled, y = sd_diameter, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Post Diameter SD - MW-type") + xlab("Years calBP") + ylab("SD") +
+  ggtitle("Posthole Diameter SD - MW-type") + xlab("Years calBP") + ylab("SD") +
   xlim(5400,4400) +
   coord_cartesian(ylim = c(0.02,0.085)) +
   scale_x_reverse() +
@@ -91,7 +91,7 @@ SDDiameterPlotMainWall1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_d
 MeanVolumePlotMain1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean_volume) & PillarPosition == "Main"), 
                                  aes(x = -sampled, y = mean_volume, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Mean Volume - M-type") + xlab("Years calBP") + labs(y = bquote("Volume" ~ (m^3))) +
+  ggtitle("Posthole Volume - M-type") + xlab("Years calBP") + labs(y = bquote("Volume" ~ (m^3))) +
   xlim(5400,4400) +
   coord_cartesian(ylim = c(0,0.07)) +
   scale_x_reverse() +
@@ -101,7 +101,7 @@ MeanVolumePlotMain1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean_vol
 MeanVolumePlotMainWall1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean_volume) & PillarPosition == "MainWall"), 
                                      aes(x = -sampled, y = mean_volume, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Mean Volume - MW-type") + xlab("Years calBP") + labs(y = bquote("Volume" ~ (m^3))) +
+  ggtitle("Posthole Volume - MW-type") + xlab("Years calBP") + labs(y = bquote("Volume" ~ (m^3))) +
   xlim(5400,4400) +
   coord_cartesian(ylim = c(0,0.07)) +
   scale_x_reverse() +
@@ -112,7 +112,7 @@ MeanVolumePlotMainWall1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean
 SDVolumePlotMain1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_volume) & PillarPosition == "Main"), 
                                aes(x = -sampled, y = sd_volume, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Post Volume SD - M-type") + xlab("Years calBP") + ylab("SD") +
+  ggtitle("Posthole Volume SD - M-type") + xlab("Years calBP") + ylab("SD") +
   xlim(5400,4400) +
   coord_cartesian(ylim = c(0,0.035)) +
   scale_x_reverse() +
@@ -122,7 +122,7 @@ SDVolumePlotMain1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_volume)
 SDVolumePlotMainWall1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_volume) & PillarPosition == "MainWall"), 
                                    aes(x = -sampled, y = sd_volume, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Post Volume SD - MW-type") + xlab("Years calBP") + ylab("SD") +
+  ggtitle("Posthole Volume SD - MW-type") + xlab("Years calBP") + ylab("SD") +
   xlim(5400,4400) +
   coord_cartesian(ylim = c(0,0.035)) +
   scale_x_reverse() +

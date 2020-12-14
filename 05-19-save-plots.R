@@ -53,6 +53,19 @@ plot_list <-
     "SpearmanDiameterDepthMain",
     "SpearmanDiameterDepthMainWall",
     
+    "LengthDepthRatioM",
+    "LengthDiameterRatioM",
+    "LengthVolumeRatioM",
+    "LengthDepthSDRatioM",
+    "LengthDiameterSDRatioM",
+    "LengthVolumeSDRatioM",
+    "LengthDepthRatioMW",
+    "LengthDiameterRatioMW",
+    "LengthVolumeRatioMW",
+    "LengthDepthSDRatioMW",
+    "LengthDiameterSDRatioMW",
+    "LengthVolumeSDRatioMW",
+    
     "LengthDepthRatioHexM",
     "LengthDiameterRatioHexM",
     "LengthVolumeRatioHexM",
@@ -149,9 +162,6 @@ plot_list <-
     "skeletalhex519density_subfilter",
     "skeletalhex519_subfilter2",
     "skeletalhex519density_subfilter2",
-    
-    "GrowthBarplot",
-    "GrowthBarplotNoSD",
 
     "hexdatatotal",
     "hexdatapit",

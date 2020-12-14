@@ -4,10 +4,9 @@
 sampleclean_trim <- readRDS(here::here("data/derived-data/sampleclean_trim.rds"))
 
 #koyama population plot
-koyama<- read_csv("other-things/Koyama Prefecture Site Counts Chart - Combined.csv")
+koyama<- read_csv("other-things/Koyama Prefecture Site Counts Chart - Combined - Trim.csv")
 koyamaclean <- koyama %>%
   group_by(Region) %>%
-  filter(!is.na(Region)) %>%
   summarise(Initial = sum(Initial), 
             Early = sum(Early), 
             Middle = sum(Middle), 
@@ -19,35 +18,6 @@ koyamaplot <- ggplot(koyamagather, aes(x = Period, y = Sites, group = Region, co
   geom_line(size = 1) +
   theme_minimal()
 ggsave(path = "figures", filename = "koyamasites.pdf")
-
-#save multiplot
-jpeg(filename = here::here("figures/LengthPostholeRatioMulti.jpg"))
-gridExtra::grid.arrange(LengthPlotCombined1000, 
-                        MeanDepthPlot1000,
-                        LengthDepthRatio,
-                        LengthPlotCombined1000,
-                        MeanDiameterPlot1000, 
-                        LengthDiameterRatio, 
-                        LengthPlotCombined1000, 
-                        MeanVolumePlot1000,
-                        LengthVolumeRatio,
-                        ncol=3)
-dev.off()
-
-jpeg(filename = here::here("figures/LengthPostholeSDRatioMulti.jpg"))
-gridExtra::grid.arrange(LengthPlotCombined1000, 
-                        SDDepthPlot1000,
-                        LengthDepthSDRatio,
-                        LengthPlotCombined1000,
-                        SDDiameterPlot1000, 
-                        LengthDiameterSDRatio, 
-                        LengthPlotCombined1000, 
-                        SDVolumePlot1000,
-                        LengthVolumeSDRatio,
-                        ncol=3)
-dev.off()
-
-
 
 #Sampling Effect Plot
 PitSubset <- subset(sampleclean_trim, !is.na(Length) & PillarPosition == "Pit" & RunID <= 5)

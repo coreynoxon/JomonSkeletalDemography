@@ -47,14 +47,14 @@ Plot15p5filter <- ggplot(data = subset(skeletalsummary_trim, !is.na(ratio_5_19))
                          aes(x = -sampled, y = ratio_5_19, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  ggtitle("15p5 - Middle Jomon Only") + xlab("Years calBP") + ylab("15p5") +
+  ggtitle("15p5 - Middle Jomon Data") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse() +
   theme_minimal()
 
 Plot5p0filter <- ggplot(data = subset(skeletalsummary_trim, !is.na(ratio_0_5)), 
                         aes(x = -sampled, y = ratio_0_5, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("5p0 - Middle Jomon Only") + xlab("Years calBP") + ylab("5p0") +
+  ggtitle("5p0 - Middle Jomon Data") + xlab("Years calBP") + ylab("5p0") +
   scale_x_reverse() +
   theme_minimal()
 
@@ -64,7 +64,7 @@ Plot15p5subfilter <- ggplot(data = subset(skeletalsummary_trim_subfilter, !is.na
                          aes(x = -sampled, y = ratio_5_19, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  ggtitle("15p5 - Middle Jomon Only - \nsubfilter") + xlab("Years calBP") + ylab("15p5") +
+  ggtitle("15p5 - Middle Jomon Data - \nsubfilter") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse() +
   theme_minimal()
 
@@ -72,7 +72,7 @@ Plot15p5subfilter2 <- ggplot(data = subset(skeletalsummary_trim_subfilter2, !is.
                             aes(x = -sampled, y = ratio_5_19, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  ggtitle("15p5 - Middle Jomon Only - \nsubfilter 2") + xlab("Years calBP") + ylab("15p5") +
+  ggtitle("15p5 - Middle Jomon Data - \nsubfilter 2") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse() +
   theme_minimal()
 
@@ -120,14 +120,14 @@ Plot15p5xlim <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)),
                              aes(x = -sampled, y = ratio_5_19, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  ggtitle("15p5 - Middle Jomon Only") + xlab("Years calBP") + ylab("15p5") +
+  ggtitle("15p5 - Middle Jomon Data") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse(limits = c(5400,4400)) +
   theme_minimal()
 
 Plot5p0xlim <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_0_5)), 
                             aes(x = -sampled, y = ratio_0_5, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("5p0 - Middle Jomon Only") + xlab("Years calBP") + ylab("5p0") +
+  ggtitle("5p0 - Middle Jomon Data") + xlab("Years calBP") + ylab("5p0") +
   scale_x_reverse(limits = c(5400,4400)) +
   theme_minimal()
 
@@ -136,7 +136,7 @@ Plot15p5xlim_subfilter <- ggplot(data = subset(skeletalsummary2_subfilter, !is.n
                        aes(x = -sampled, y = ratio_5_19, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  ggtitle("15p5 - Middle Jomon Only - \nsubfilter") + xlab("Years calBP") + ylab("15p5") +
+  ggtitle("15p5 - Middle Jomon Data - \nsubfilter") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse(limits = c(5400,4400)) +
   theme_minimal()
 
@@ -144,7 +144,7 @@ Plot15p5xlim_subfilter2 <- ggplot(data = subset(skeletalsummary2_subfilter2, !is
                                  aes(x = -sampled, y = ratio_5_19, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  ggtitle("15p5 - Middle Jomon Only - \nsubfilter 2") + xlab("Years calBP") + ylab("15p5") +
+  ggtitle("15p5 - Middle Jomon Data - \nsubfilter 2") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse(limits = c(5400,4400)) +
   theme_minimal()
 
@@ -234,7 +234,7 @@ Plot15p5filterW <- ggplot(data = subset(skeletalsummary_trim, !is.na(ratio_5_19)
 Plot5p0filterW <- ggplot(data = subset(skeletalsummary_trim, !is.na(ratio_0_5)), 
                         aes(x = -sampled, y = ratio_0_5, group = RunID, weight = n)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("5p0 - Middle Jomon Only - \nweighted") + xlab("Years calBP") + ylab("5p0") +
+  ggtitle("5p0 - Middle Jomon Data - \nweighted") + xlab("Years calBP") + ylab("5p0") +
   scale_x_reverse() +
   theme_minimal()
 
@@ -263,14 +263,14 @@ Plot15p5xlimW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)),
                        aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  ggtitle("15p5 - Middle Jomon Only - \nweighted") + xlab("Years calBP") + ylab("15p5") +
+  ggtitle("15p5 - Middle Jomon Data - \nweighted") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse(limits = c(5400,4400)) +
   theme_minimal()
 
 Plot5p0xlimW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_0_5)), 
                       aes(x = -sampled, y = ratio_0_5, group = RunID, weight = n)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("5p0 - Middle Jomon Only - \nweighted") + xlab("Years calBP") + ylab("5p0") +
+  ggtitle("5p0 - Middle Jomon Data - \nweighted") + xlab("Years calBP") + ylab("5p0") +
   scale_x_reverse(limits = c(5400,4400)) +
   theme_minimal()
 

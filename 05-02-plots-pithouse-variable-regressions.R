@@ -16,7 +16,7 @@ MeanDepthPlot1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean_depth)),
                             aes(x = -sampled, y = mean_depth, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   xlim(5400,4400) +
-  ggtitle("Mean Post Depth") + xlab("Years calBP") + ylab("m") +
+  ggtitle("Posthole Depth - Combined Types") + xlab("Years calBP") + ylab("Depth (m)") +
   scale_x_reverse() +
   annotate("rect", xmin=c(4400,5200), xmax=c(4600,5400), ymin=c(-Inf,-Inf) , ymax=c(Inf,Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -25,7 +25,7 @@ MeanDiameterPlot1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean_diame
                                aes(x = -sampled, y = mean_diameter, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   xlim(5400,4400) +
-  ggtitle("Mean Post Diameter") + xlab("Years calBP") + ylab("m") +
+  ggtitle("Posthole Diameter - Combined Types") + xlab("Years calBP") + ylab("Diameter (m)") +
   scale_x_reverse() +
   annotate("rect", xmin=c(4400,5200), xmax=c(4600,5400), ymin=c(-Inf,-Inf) , ymax=c(Inf,Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -34,7 +34,7 @@ MeanVolumePlot1000 <- ggplot(data = subset(sampleclean_trim, !is.na(mean_volume)
                              aes(x = -sampled, y = mean_volume, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   xlim(5400,4400) +
-  ggtitle("Mean Post Volume") + xlab("Years calBP") + labs(y = expression(m^3)) +
+  ggtitle("Posthole Volume - Combined Types") + xlab("Years calBP") + labs(y = bquote("Volume" ~ (m^3))) +
   scale_x_reverse() +
   annotate("rect", xmin=c(5200), xmax=c(5400), ymin=c(-Inf) , ymax=c(Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -43,7 +43,7 @@ SDDepthPlot1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_depth)),
                           aes(x = -sampled, y = sd_depth, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   xlim(5400,4400) +
-  ggtitle("Post Depth SD") + xlab("Years calBP") + ylab("SD") +
+  ggtitle("Posthole Depth SD - Combined Types") + xlab("Years calBP") + ylab("Depth SD") +
   scale_x_reverse() +
   annotate("rect", xmin=c(4400,5200), xmax=c(4600,5400), ymin=c(-Inf,-Inf) , ymax=c(Inf,Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -52,7 +52,7 @@ SDDiameterPlot1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_diameter)
                              aes(x = -sampled, y = sd_diameter, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   xlim(5400,4400) +
-  ggtitle("Post Diameter SD") + xlab("Years calBP") + ylab("SD") +
+  ggtitle("Posthole Diameter SD - Combined Types") + xlab("Years calBP") + ylab("Diameter SD") +
   scale_x_reverse() +
   annotate("rect", xmin=c(4400,5200), xmax=c(4600,5400), ymin=c(-Inf,-Inf) , ymax=c(Inf,Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -61,7 +61,7 @@ SDVolumePlot1000 <- ggplot(data = subset(sampleclean_trim, !is.na(sd_volume)),
                            aes(x = -sampled, y = sd_volume, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   xlim(5400,4400) +
-  ggtitle("Post Volume SD") + xlab("Years calBP") + ylab("SD") +
+  ggtitle("Posthole Volume SD - Combined Types") + xlab("Years calBP") + ylab("Volume SD") +
   scale_x_reverse() +
   annotate("rect", xmin=c(5200), xmax=c(5400), ymin=c(-Inf,-Inf) , ymax=c(Inf,Inf), alpha=0.4, fill="gray") +
   theme_minimal()

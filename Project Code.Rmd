@@ -1,0 +1,137 @@
+---
+title: "Project Code"
+author: "Corey Noxon"
+date: "5/28/2020"
+output: html_document
+---
+
+The knitting started at `r Sys.time()`
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+```
+
+```{r import-data, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("01-library-function-data-import.R"))}
+suppressWarnings(source('01-library-function-data-import.R'))
+```
+
+```{r prep-data, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("02-data-prep.R"))}
+suppressWarnings(source('02-data-prep.R'))
+```
+
+```{r mcmc, cache=TRUE, cache.extra=tools::md5sum(here::here("03-MCMC-aoristic-analysis.R"))}
+suppressWarnings(source('03-MCMC-aoristic-analysis.R'))
+```
+
+```{r corr-density, cache=TRUE, cache.extra=tools::md5sum(here::here("04-01-correlation-analysis-density.R"))}
+suppressWarnings(source('04-01-correlation-analysis-density.R'))
+```
+
+```{r corr-floor-space, cache=TRUE, cache.extra=tools::md5sum(here::here("04-02-correlation-analysis-floor-space.R"))}
+suppressWarnings(source('04-02-correlation-analysis-floor-space.R'))
+```
+
+```{r corr-length, cache=TRUE, cache.extra=tools::md5sum(here::here("04-03-correlation-analysis-pithouse-length.R"))}
+suppressWarnings(source('04-03-correlation-analysis-pithouse-length.R'))
+```
+
+```{r corr-length-floor-space, cache=TRUE, cache.extra=tools::md5sum(here::here("04-04-correlation-analysis-pithouse-length-floor-space-by-type.R"))}
+suppressWarnings(source('04-04-correlation-analysis-pithouse-length-floor-space-by-type.R'))
+```
+
+```{r corr-posthole, cache=TRUE, cache.extra=tools::md5sum(here::here("04-05-correlation-analysis-posthole-measurements.R"))}
+suppressWarnings(source('04-05-correlation-analysis-posthole-measurements.R'))
+```
+
+```{r corr-pit-post-ratio, cache=TRUE, cache.extra=tools::md5sum(here::here("04-09-correlation-analysis-pithouse-posthole-ratios.R"))}
+suppressWarnings(source('04-09-correlation-analysis-pithouse-posthole-ratios.R'))
+```
+
+```{r time-block-cor, cache=TRUE, cache.extra=tools::md5sum(here::here("04-10-time-block-correlations.R"))}
+suppressWarnings(source('04-10-time-block-correlations.R'))
+```
+
+```{r plots-pithouse-counts, cache=TRUE, cache.extra=tools::md5sum(here::here("05-01-plots-pithouse-counts.R"))}
+suppressWarnings(source('05-01-plots-pithouse-counts.R'))
+```
+
+```{r plots-pithouse-variable, cache=TRUE, cache.extra=tools::md5sum(here::here("05-02-plots-pithouse-variable-regressions.R"))}
+suppressWarnings(source('05-02-plots-pithouse-variable-regressions.R'))
+```
+
+```{r plots-floor-space-type, cache=TRUE, cache.extra=tools::md5sum(here::here("05-03-plots-floor-space-regressions-by-type.R"))}
+suppressWarnings(source('05-03-plots-floor-space-regressions-by-type.R'))
+```
+
+```{r plots-length-type, cache=TRUE, cache.extra=tools::md5sum(here::here("05-04-plots-pithouse-length-regressions-by-type.R"))}
+suppressWarnings(source('05-04-plots-pithouse-length-regressions-by-type.R'))
+```
+
+```{r plots-main-mainwall-type, cache=TRUE, cache.extra=tools::md5sum(here::here("05-05-plots-main-vs-mainwall-type-comparison.R"))}
+suppressWarnings(source('05-05-plots-main-vs-mainwall-type-comparison.R'))
+```
+
+```{r plots-floor-space-boxplot, cache=TRUE, cache.extra=tools::md5sum(here::here("05-06-plots-floor-space-boxplots-type-comparison.R"))}
+suppressWarnings(source('05-06-plots-floor-space-boxplots-type-comparison.R'))
+```
+
+```{r plots-length-boxplot, cache=TRUE, cache.extra=tools::md5sum(here::here("05-07-plots-pithouse-length-boxplots-type-comparison.R"))}
+suppressWarnings(source('05-07-plots-pithouse-length-boxplots-type-comparison.R'))
+```
+
+```{r plots-skeletal, cache=TRUE, cache.extra=tools::md5sum(here::here("05-08-plots-skeletal-analysis.R"))}
+suppressWarnings(source('05-08-plots-skeletal-analysis.R'))
+```
+
+```{r plots-hex, cache=TRUE, cache.extra=tools::md5sum(here::here("05-10-hexplots.R"))}
+suppressWarnings(source('05-10-hexplots.R'))
+```
+
+```{r plots-hex-depth, cache=TRUE, cache.extra=tools::md5sum(here::here("05-11-hexplot-depth.R"))}
+suppressWarnings(source('05-11-hexplot-depth.R'))
+```
+
+```{r plots-hex-diameter, cache=TRUE, cache.extra=tools::md5sum(here::here("05-12-hexplot-diameter.R"))}
+suppressWarnings(source('05-12-hexplot-diameter.R'))
+```
+
+```{r plots-hex-volume, cache=TRUE, cache.extra=tools::md5sum(here::here("05-13-hexplot-volume.R"))}
+suppressWarnings(source('05-13-hexplot-volume.R'))
+```
+
+```{r plots-hex-depth-sd, cache=TRUE, cache.extra=tools::md5sum(here::here("05-14-hexplot-depth-sd.R"))}
+suppressWarnings(source('05-14-hexplot-depth-sd.R'))
+```
+
+```{r plots-hex-diameter-sd, cache=TRUE, cache.extra=tools::md5sum(here::here("05-15-hexplot-diameter-sd.R"))}
+suppressWarnings(source('05-15-hexplot-diameter-sd.R'))
+```
+
+```{r plots-hex-volume-sd, cache=TRUE, cache.extra=tools::md5sum(here::here("05-16-hexplot-volume-sd.R"))}
+suppressWarnings(source('05-16-hexplot-volume-sd.R'))
+```
+
+```{r plots-sum-mean-length, cache=TRUE, cache.extra=tools::md5sum(here::here("05-17-sum-total-and-mean-length-barplots.R"))}
+suppressWarnings(source('05-17-sum-total-and-mean-length-barplots.R'))
+```
+
+```{r plots-length-ratios, cache=TRUE, cache.extra=tools::md5sum(here::here("05-18-hexplot-length-ratios.R"))}
+suppressWarnings(source('05-18-hexplot-length-ratios.R'))
+```
+
+```{r extras, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("07-extras.R"))}
+suppressWarnings(source('07-extras.R'))
+```
+
+```{r tables, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("06-tables.R"))}
+suppressWarnings(source('06-tables.R'))
+```
+
+```{r plots-save, cache=TRUE, cache.extra=tools::md5sum(here::here("05-19-save-plots.R"))}
+suppressWarnings(source('05-19-save-plots.R'))
+```
+
+```{r echo=FALSE, results='asis'}
+library(knitr)
+kable(PithouseTypeTableScaled, caption = "Pithouse Type Counts")
+```

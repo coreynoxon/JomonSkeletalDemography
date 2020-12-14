@@ -14,7 +14,7 @@ ratio_prep_MW <- ratio_prep %>%
 LengthDepthRatioM <- ggplot(data = ratio_prep_M, 
                            aes(x = -sampled, y = length_depth_ratio, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Length to Mean Depth Ratio - M-type") + xlab("Years calBP") + ylab("mean depth/length ratio") +
+  ggtitle("Posthole Depth/Pithouse Length Ratio - M-type") + xlab("Years calBP") + ylab("mean depth/length ratio") +
   xlim(5400,4400) +
   annotate("rect", xmin=c(4400,5200), xmax=c(4600,5400), ymin=c(-Inf,-Inf) , ymax=c(Inf,Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -23,7 +23,7 @@ LengthDepthRatioM <- ggplot(data = ratio_prep_M,
 LengthDiameterRatioM <- ggplot(data = ratio_prep_M, 
                               aes(x = -sampled, y = length_diameter_ratio, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Length to Mean Diameter Ratio - M-type") + xlab("Years calBP") + ylab("mean diameter/length ratio") +
+  ggtitle("Posthole Diameter/Pithouse Length Ratio - M-type") + xlab("Years calBP") + ylab("mean diameter/length ratio") +
   xlim(5400,4400) +
   annotate("rect", xmin=c(4400,5200), xmax=c(4600,5400), ymin=c(-Inf,-Inf) , ymax=c(Inf,Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -32,7 +32,7 @@ LengthDiameterRatioM <- ggplot(data = ratio_prep_M,
 LengthVolumeRatioM <- ggplot(data = ratio_prep_M, 
                             aes(x = -sampled, y = length_volume_ratio, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Length to Mean Volume Ratio - M-type") + xlab("Years calBP") + ylab("mean volume/length ratio") +
+  ggtitle("Posthole Volume/Pithouse Length Ratio - M-type") + xlab("Years calBP") + ylab("mean volume/length ratio") +
   xlim(5400,4400) +
   annotate("rect", xmin=c(5200), xmax=c(5400), ymin=c(-Inf) , ymax=c(Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -43,7 +43,7 @@ LengthVolumeRatioM <- ggplot(data = ratio_prep_M,
 LengthDepthRatioMW <- ggplot(data = ratio_prep_MW, 
                            aes(x = -sampled, y = length_depth_ratio, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Length to Mean Depth Ratio - MW-type") + xlab("Years calBP") + ylab("mean depth/length ratio") +
+  ggtitle("Posthole Depth/Pithouse Length Ratio - MW-type") + xlab("Years calBP") + ylab("mean depth/length ratio") +
   xlim(5400,4400) +
   annotate("rect", xmin=c(4400,5200), xmax=c(4600,5400), ymin=c(-Inf,-Inf) , ymax=c(Inf,Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -52,7 +52,7 @@ LengthDepthRatioMW <- ggplot(data = ratio_prep_MW,
 LengthDiameterRatioMW <- ggplot(data = ratio_prep_MW, 
                               aes(x = -sampled, y = length_diameter_ratio, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Length to Mean Diameter Ratio - MW-type") + xlab("Years calBP") + ylab("mean diameter/length ratio") +
+  ggtitle("Posthole Diameter/Pithouse Length Ratio - MW-type") + xlab("Years calBP") + ylab("mean diameter/length ratio") +
   xlim(5400,4400) +
   annotate("rect", xmin=c(4400), xmax=c(4600), ymin=c(-Inf) , ymax=c(Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -61,7 +61,7 @@ LengthDiameterRatioMW <- ggplot(data = ratio_prep_MW,
 LengthVolumeRatioMW <- ggplot(data = ratio_prep_MW, 
                             aes(x = -sampled, y = length_volume_ratio, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Length to Mean Volume Ratio - MW-type") + xlab("Years calBP") + ylab("mean volume/length ratio") +
+  ggtitle("Posthole Volume/Pithouse Length Ratio - MW-type") + xlab("Years calBP") + ylab("mean volume/length ratio") +
   xlim(5400,4400) +
   annotate("rect", xmin=c(4400), xmax=c(4600), ymin=c(-Inf) , ymax=c(Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -72,7 +72,7 @@ LengthVolumeRatioMW <- ggplot(data = ratio_prep_MW,
 LengthDepthSDRatioM <- ggplot(data = ratio_prep_M, 
                              aes(x = -sampled, y = length_depth_sd_ratio, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Length to Depth SD Ratio - M-type") + xlab("Years calBP") + ylab("depth sd/length ratio") +
+  ggtitle("Posthole Depth SD/Pithouse Length Ratio - M-type") + xlab("Years calBP") + ylab("depth sd/length ratio") +
   xlim(5400,4400) +
   annotate("rect", xmin=c(4400,5200), xmax=c(4600,5400), ymin=c(-Inf,-Inf) , ymax=c(Inf,Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -81,7 +81,7 @@ LengthDepthSDRatioM <- ggplot(data = ratio_prep_M,
 LengthDiameterSDRatioM <- ggplot(data = ratio_prep_M, 
                                 aes(x = -sampled, y = length_diameter_sd_ratio, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Length to Diameter SD Ratio - M-type") + xlab("Years calBP") + ylab("diameter sd/length ratio") +
+  ggtitle("Posthole Diameter SD/Pithouse Length Ratio - M-type") + xlab("Years calBP") + ylab("diameter sd/length ratio") +
   xlim(5400,4400) +
   annotate("rect", xmin=c(4400,5200), xmax=c(4600,5400), ymin=c(-Inf,-Inf) , ymax=c(Inf,Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -90,7 +90,7 @@ LengthDiameterSDRatioM <- ggplot(data = ratio_prep_M,
 LengthVolumeSDRatioM <- ggplot(data = ratio_prep_M, 
                               aes(x = -sampled, y = length_volume_sd_ratio, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Length to Volume SD Ratio - M-type") + xlab("Years calBP") + ylab("volume sd/length ratio") +
+  ggtitle("Posthole Volume SD/Pithouse Length Ratio - M-type") + xlab("Years calBP") + ylab("volume sd/length ratio") +
   xlim(5400,4400) +
   annotate("rect", xmin=c(5200), xmax=c(5400), ymin=c(-Inf) , ymax=c(Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -102,7 +102,7 @@ LengthVolumeSDRatioM <- ggplot(data = ratio_prep_M,
 LengthDepthSDRatioMW <- ggplot(data = ratio_prep_MW, 
                              aes(x = -sampled, y = length_depth_sd_ratio, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Length to Depth SD Ratio - MW-type") + xlab("Years calBP") + ylab("depth sd/length ratio") +
+  ggtitle("Posthole Depth SD/Pithouse Length Ratio - MW-type") + xlab("Years calBP") + ylab("depth sd/length ratio") +
   xlim(5400,4400) +
   annotate("rect", xmin=c(4400), xmax=c(4600), ymin=c(-Inf) , ymax=c(Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -111,7 +111,7 @@ LengthDepthSDRatioMW <- ggplot(data = ratio_prep_MW,
 LengthDiameterSDRatioMW <- ggplot(data = ratio_prep_MW, 
                                 aes(x = -sampled, y = length_diameter_sd_ratio, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Length to Diameter SD Ratio - MW-type") + xlab("Years calBP") + ylab("diameter sd/length ratio") +
+  ggtitle("Posthole Diameter SD/Pithouse Length Ratio - MW-type") + xlab("Years calBP") + ylab("diameter sd/length ratio") +
   xlim(5400,4400) +
   annotate("rect", xmin=c(4400,5200), xmax=c(4600,5400), ymin=c(-Inf,-Inf) , ymax=c(Inf,Inf), alpha=0.4, fill="gray") +
   theme_minimal()
@@ -120,7 +120,7 @@ LengthDiameterSDRatioMW <- ggplot(data = ratio_prep_MW,
 LengthVolumeSDRatioMW <- ggplot(data = ratio_prep_MW, 
                               aes(x = -sampled, y = length_volume_sd_ratio, group = RunID)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("Length to Volume SD Ratio - MW-type") + xlab("Years calBP") + ylab("volume sd/length ratio") +
+  ggtitle("Posthole Volume SD/Pithouse Length Ratio - MW-type") + xlab("Years calBP") + ylab("volume sd/length ratio") +
   xlim(5400,4400) +
   annotate("rect", xmin=c(4400,5200), xmax=c(4600,5400), ymin=c(-Inf,-Inf) , ymax=c(Inf,Inf), alpha=0.4, fill="gray") +
   theme_minimal()
