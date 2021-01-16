@@ -94,6 +94,7 @@ plot_list <-
     
     "PithouseCounts1000Plot",
     "PithouseCounts1000Barplot",
+    "PithouseCounts1000BarplotAvg",
     "PithouseCounts1000BarplotStack",
     "PithouseCounts1000BarplotStackAvg",
     "PithouseCounts1000BarplotStackAvgNoUK",

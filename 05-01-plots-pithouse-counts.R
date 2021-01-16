@@ -33,6 +33,18 @@ PithouseCounts1000Barplot <- ggplot(data = samplecleanround) +
                                max(-samplecleanround$sampled), 100) ) +
   theme_minimal()
 
+#Pithouse Count Histogram - Adjusted Barplot 
+PithouseCounts1000BarplotAvg <- ggplot(data = samplecleanround) +
+  aes(x = -sampled) +
+  geom_bar() +
+  ggtitle("Pithouse Counts") + xlab("Years calBP") + ylab("pithouses") +
+  scale_y_continuous(labels = function(x) x/1000) +
+  scale_x_reverse(breaks = seq(min(-samplecleanround$sampled), 
+                               max(-samplecleanround$sampled), 100), 
+                  labels = seq(min(-samplecleanround$sampled), 
+                               max(-samplecleanround$sampled), 100) ) +
+  theme_minimal()
+
 #Stacked Barplot
 PithouseCounts1000BarplotStack <- ggplot(data = samplecleanround) +
   aes(x = -sampled, fill = PillarPosition) +
