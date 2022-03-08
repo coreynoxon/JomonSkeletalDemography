@@ -1,7 +1,7 @@
 ---
 title: "A Paleodemographic Approach to the Middle Jomon Boom and Bust Population Pattern"
 author: "Corey Noxon"
-date: "1/16/2021"
+date: "3/08/2021"
 output: html_document
 ---
 
