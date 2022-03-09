@@ -41,6 +41,7 @@ skeletalsummary_trim25_subfilter2 <- skeletalsummary_trim_subfilter2 %>%
 
 
 ###Unweighted Plots
+
 ## Unweighted Plots from trimmed dates
 
 Plot15p5filter <- ggplot(data = subset(skeletalsummary_trim, !is.na(ratio_5_19)), 
@@ -220,21 +221,23 @@ Plot15p5alldates_subfilter2 <- ggplot(data = subset(skeletalsummary2_subfilter2,
   scale_x_reverse() +
   theme_minimal()
 
+
 ###Weighted Plots
+
 ## Weighted Plots from trimmed dates
 
 Plot15p5filterW <- ggplot(data = subset(skeletalsummary_trim, !is.na(ratio_5_19)), 
                          aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  ggtitle("15p5 - Middle Jomon Only - \nweighted") + xlab("Years calBP") + ylab("15p5") +
+  ggtitle("15p5 - Middle Jomon Only - weighted") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse() +
   theme_minimal()
 
 Plot5p0filterW <- ggplot(data = subset(skeletalsummary_trim, !is.na(ratio_0_5)), 
                         aes(x = -sampled, y = ratio_0_5, group = RunID, weight = n)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("5p0 - Middle Jomon Data - \nweighted") + xlab("Years calBP") + ylab("5p0") +
+  ggtitle("5p0 - Middle Jomon Data - weighted") + xlab("Years calBP") + ylab("5p0") +
   scale_x_reverse() +
   theme_minimal()
 
@@ -245,7 +248,7 @@ Plot15p5cartxlimW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)),
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
   geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
   coord_cartesian(xlim = c(5400,4400), ylim = c(-0.25,0.5)) +
-  ggtitle("15p5 - Total Jomon Data - \nweighted") + xlab("Years calBP") + ylab("15p5") +
+  ggtitle("15p5 - Total Jomon Data - weighted") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse() +
   theme_minimal()
 
@@ -253,7 +256,7 @@ Plot5p0cartxlimW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_0_5)),
                           aes(x = -sampled, y = ratio_0_5, group = RunID, weight = n)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
   coord_cartesian(xlim = c(5400,4400)) +
-  ggtitle("5p0 - Total Jomon Data - \nweighted") + xlab("Years calBP") + ylab("5p0") +
+  ggtitle("5p0 - Total Jomon Data - weighted") + xlab("Years calBP") + ylab("5p0") +
   scale_x_reverse() +
   theme_minimal()
 
@@ -263,14 +266,14 @@ Plot15p5xlimW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)),
                        aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  ggtitle("15p5 - Middle Jomon Data - \nweighted") + xlab("Years calBP") + ylab("15p5") +
+  ggtitle("15p5 - Middle Jomon Data - weighted") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse(limits = c(5400,4400)) +
   theme_minimal()
 
 Plot5p0xlimW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_0_5)), 
                       aes(x = -sampled, y = ratio_0_5, group = RunID, weight = n)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) + 
-  ggtitle("5p0 - Middle Jomon Data - \nweighted") + xlab("Years calBP") + ylab("5p0") +
+  ggtitle("5p0 - Middle Jomon Data - weighted") + xlab("Years calBP") + ylab("5p0") +
   scale_x_reverse(limits = c(5400,4400)) +
   theme_minimal()
 
@@ -281,7 +284,7 @@ Plot15p5xlimextendW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
   coord_cartesian(xlim = c(5400,4400), ylim = c(-0.25,0.5)) +
-  ggtitle("15p5 - Middle Jomon Expanded - \nweighted") + xlab("Years calBP") + ylab("15p5") +
+  ggtitle("15p5 - Middle Jomon Expanded - weighted") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse(limits = c(6400,3400)) +
   theme_minimal()
 
@@ -289,7 +292,7 @@ Plot5p0xlimextendW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_0_5)),
                             aes(x = -sampled, y = ratio_0_5, group = RunID, weight = n)) +
   stat_smooth(geom = "line", color = "blue", alpha = 0.1, se = FALSE) +
   coord_cartesian(xlim = c(5400,4400), ylim = c(-0.25,0.5)) +
-  ggtitle("5p0 - Middle Jomon Expanded - \nweighted") + xlab("Years calBP") + ylab("5p0") +
+  ggtitle("5p0 - Middle Jomon Expanded - weighted") + xlab("Years calBP") + ylab("5p0") +
   scale_x_reverse(limits = c(6400,3400)) +
   theme_minimal()
 
@@ -311,68 +314,211 @@ Plot5p0alldatesW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_0_5)),
   theme_minimal()
 
 
-#Hex and density plots for skeletal data
-skeletalhexdata <- skeletalsummary_trim %>%
-  select(ratio_5_19, sampled) %>%
-  filter(ratio_5_19 != "uk")
+##Confidence Envelope Plots
 
-skeletalhex519 <- ggplot(skeletalhexdata, aes(x = -sampled, y = ratio_5_19)) +
-  geom_hex() +
-  geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  scale_fill_continuous(type = "viridis", labels = function(x) x/2000) +
-  ggtitle("15p5 - total") + xlab("Years calBP") + ylab("15p5") +
+#Show Confidence Envelopes and Points (Data Trimmed to Middle Jomon Only)
+PointsCItrim <- ggplot(data = subset(skeletalsummary_trim, !is.na(ratio_5_19)), 
+                   aes(x = -sampled, y = ratio_5_19, group = RunID)) +
+  geom_smooth(method = "loess", linetype = 0, alpha = 0.006) +
+  geom_point(size = 0.25) +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  ggtitle("15p5 - Data Trimmed") + xlab("Years calBP") + ylab("15p5") +
+  coord_cartesian(ylim = c(-0.5,0.8)) +
   scale_x_reverse() +
   theme_minimal()
 
-skeletalhex519density <- ggplot(data = skeletalhexdata, aes(x = -sampled, y = ratio_5_19)) +
-  stat_density_2d(aes(fill = ..density..), geom = "raster", contour = FALSE) +
-  geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  scale_fill_distiller(palette= "Spectral") +
-  ggtitle("15p5 - total") + xlab("Years calBP") + ylab("15p5") +
+#Show Confidence Envelopes and LOESS Regressions (Data Trimmed to Middle Jomon Only)
+LoessCItrim <- ggplot(data = subset(skeletalsummary_trim, !is.na(ratio_5_19)), 
+                  aes(x = -sampled, y = ratio_5_19, group = RunID)) +
+  geom_smooth(method = "loess", alpha = 0.006, size = 0.25, color = "blue") +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  ggtitle("15p5 - Data Trimmed") + xlab("Years calBP") + ylab("15p5") +
+  coord_cartesian(ylim = c(-0.5,0.8)) +
   scale_x_reverse() +
   theme_minimal()
 
-#Hex and density plots for skeletal data using subfilter
-skeletalhexdata_subfilter <- skeletalsummary_trim_subfilter %>%
-  select(ratio_5_19, sampled) %>%
-  filter(ratio_5_19 != "uk")
-
-skeletalhex519_subfilter <- ggplot(skeletalhexdata_subfilter, aes(x = -sampled, y = ratio_5_19)) +
-  geom_hex() +
-  geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  scale_fill_continuous(type = "viridis", labels = function(x) x/2000) +
-  ggtitle("15p5 - subfilter total") + xlab("Years calBP") + ylab("15p5") +
+#Show Confidence Envelopes, Points, and LOESS Regressions (Data Trimmed to Middle Jomon Only)
+PointsLoessCItrim <- ggplot(data = subset(skeletalsummary_trim, !is.na(ratio_5_19)), 
+                        aes(x = -sampled, y = ratio_5_19, group = RunID)) +
+  geom_smooth(method = "loess", alpha = 0.006, size = 0.25, color = "blue") +
+  geom_point(size = 0.25) +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  ggtitle("15p5 - Data Trimmed") + xlab("Years calBP") + ylab("15p5") +
+  coord_cartesian(ylim = c(-0.5,0.8)) +
   scale_x_reverse() +
   theme_minimal()
 
-skeletalhex519density_subfilter <- ggplot(data = skeletalhexdata_subfilter, aes(x = -sampled, y = ratio_5_19)) +
-  stat_density_2d(aes(fill = ..density..), geom = "raster", contour = FALSE) +
-  geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  scale_fill_distiller(palette= "Spectral") +
-  ggtitle("15p5 - subfilter total") + xlab("Years calBP") + ylab("15p5") +
+##Cartesian
+
+#Show Confidence Envelopes and Points (trimmed using Cartesian coordinates)
+PointsCIcartxlim <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
+                   aes(x = -sampled, y = ratio_5_19, group = RunID)) +
+  geom_smooth(method = "loess", linetype = 0, alpha = 0.006) +
+  geom_point(size = 0.25) +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  coord_cartesian(xlim = c(5400,4400), ylim = c(-0.5,0.8)) +
+  ggtitle("15p5 - Cartesian Trimmed") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse() +
   theme_minimal()
 
-skeletalhexdata_subfilter2 <- skeletalsummary_trim_subfilter2 %>%
-  select(ratio_5_19, sampled) %>%
-  filter(ratio_5_19 != "uk")
-
-skeletalhex519_subfilter2 <- ggplot(skeletalhexdata_subfilter2, aes(x = -sampled, y = ratio_5_19)) +
-  geom_hex() +
-  geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  scale_fill_continuous(type = "viridis", labels = function(x) x/2000) +
-  ggtitle("15p5 - subfilter 2 total") + xlab("Years calBP") + ylab("15p5") +
+#Show Confidence Envelopes and LOESS Regressions (trimmed using Cartesian coordinates)
+LoessCIcartxlim <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
+                  aes(x = -sampled, y = ratio_5_19, group = RunID)) +
+  geom_smooth(method = "loess", alpha = 0.006, size = 0.25, color = "blue") +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  coord_cartesian(xlim = c(5400,4400), ylim = c(-0.5,0.8)) +
+  ggtitle("15p5 - Cartesian Trimmed") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse() +
   theme_minimal()
 
-skeletalhex519density_subfilter2 <- ggplot(data = skeletalhexdata_subfilter2, aes(x = -sampled, y = ratio_5_19)) +
-  stat_density_2d(aes(fill = ..density..), geom = "raster", contour = FALSE) +
-  geom_hline(yintercept = 0.173, linetype = "dashed", size = 1) +
-  scale_fill_distiller(palette= "Spectral") +
-  ggtitle("15p5 - subfilter 2 total") + xlab("Years calBP") + ylab("15p5") +
+#Show Confidence Envelopes, Points, and LOESS Regressions (trimmed using Cartesian coordinates)
+PointsLoessCIcartxlim <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
+                        aes(x = -sampled, y = ratio_5_19, group = RunID)) +
+  geom_smooth(method = "loess", alpha = 0.006, size = 0.25, color = "blue") +
+  geom_point(size = 0.25) +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  coord_cartesian(xlim = c(5400,4400), ylim = c(-0.5,0.8)) +
+  ggtitle("15p5 - Cartesian Trimmed") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse() +
   theme_minimal()
 
+##Xlim
+
+#Show Confidence Envelopes and Points (trimmed using xlim)
+PointsCIxlimextend <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
+                           aes(x = -sampled, y = ratio_5_19, group = RunID)) +
+  geom_smooth(method = "loess", linetype = 0, alpha = 0.006) +
+  geom_point(size = 0.25) +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  ggtitle("15p5 - Xlim Trimmed") + xlab("Years calBP") + ylab("15p5") +
+  coord_cartesian(ylim = c(-0.5,0.8)) +
+  scale_x_reverse(limits = c(5400,4400)) +
+  theme_minimal()
+
+#Show Confidence Envelopes and LOESS Regressions (trimmed using xlim)
+LoessCIxlimextend <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
+                          aes(x = -sampled, y = ratio_5_19, group = RunID)) +
+  geom_smooth(method = "loess", alpha = 0.006, size = 0.25, color = "blue") +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  ggtitle("15p5 - Xlim Trimmed") + xlab("Years calBP") + ylab("15p5") +
+  coord_cartesian(ylim = c(-0.5,0.8)) +
+  scale_x_reverse(limits = c(5400,4400)) +
+  theme_minimal()
+
+#Show Confidence Envelopes, Points, and LOESS Regressions (trimmed using xlim)
+PointsLoessCIxlimextend <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
+                                aes(x = -sampled, y = ratio_5_19, group = RunID)) +
+  geom_smooth(method = "loess", alpha = 0.006, size = 0.25, color = "blue") +
+  geom_point(size = 0.25) +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  ggtitle("15p5 - Xlim Trimmed") + xlab("Years calBP") + ylab("15p5") +
+  coord_cartesian(ylim = c(-0.5,0.8)) +
+  scale_x_reverse(limits = c(5400,4400)) +
+  theme_minimal()
+
+
+##Weighted
+
+#Show Confidence Envelopes and Points (Data Trimmed to Middle Jomon Only and Weighted)
+PointsCItrimW <- ggplot(data = subset(skeletalsummary_trim, !is.na(ratio_5_19)), 
+                   aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
+  geom_smooth(method = "loess", linetype = 0, alpha = 0.006) +
+  geom_point(size = 0.25) +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  ggtitle("15p5 - Data Trimmed - weighted") + xlab("Years calBP") + ylab("15p5") +
+  coord_cartesian(ylim = c(-0.5,0.8)) +
+  scale_x_reverse() +
+  theme_minimal()
+
+#Show Confidence Envelopes and LOESS Regressions (Data Trimmed to Middle Jomon Only and Weighted)
+LoessCItrimW <- ggplot(data = subset(skeletalsummary_trim, !is.na(ratio_5_19)), 
+                  aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
+  geom_smooth(method = "loess", alpha = 0.006, size = 0.25, color = "blue") +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  ggtitle("15p5 - Data Trimmed - weighted") + xlab("Years calBP") + ylab("15p5") +
+  coord_cartesian(ylim = c(-0.5,0.8)) +
+  scale_x_reverse() +
+  theme_minimal()
+
+#Show Confidence Envelopes, Points, and LOESS Regressions (Data Trimmed to Middle Jomon Only and Weighted)
+PointsLoessCItrimW <- ggplot(data = subset(skeletalsummary_trim, !is.na(ratio_5_19)), 
+                        aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
+  geom_smooth(method = "loess", alpha = 0.006, size = 0.25, color = "blue") +
+  geom_point(size = 0.25) +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  ggtitle("15p5 - Data Trimmed - weighted") + xlab("Years calBP") + ylab("15p5") +
+  coord_cartesian(ylim = c(-0.5,0.8)) +
+  scale_x_reverse() +
+  theme_minimal()
+
+
+##Cartesian (weighted)
+
+#Show Confidence Envelopes and Points (trimmed using Cartesian coordinates and weighted)
+PointsCIcartxlimW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
+                       aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
+  geom_smooth(method = "loess", linetype = 0, alpha = 0.006) +
+  geom_point(size = 0.25) +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  coord_cartesian(xlim = c(5400,4400), ylim = c(-0.5,0.8)) +
+  ggtitle("15p5 - Cartesian Trimmed - weighted") + xlab("Years calBP") + ylab("15p5") +
+  scale_x_reverse() +
+  theme_minimal()
+
+#Show Confidence Envelopes and LOESS Regressions (trimmed using Cartesian coordinates and weighted)
+LoessCIcartxlimW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
+                      aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
+  geom_smooth(method = "loess", alpha = 0.006, size = 0.25, color = "blue") +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  coord_cartesian(xlim = c(5400,4400), ylim = c(-0.5,0.8)) +
+  ggtitle("15p5 - Cartesian Trimmed - weighted") + xlab("Years calBP") + ylab("15p5") +
+  scale_x_reverse() +
+  theme_minimal()
+
+#Show Confidence Envelopes, Points, and LOESS Regressions (trimmed using Cartesian coordinates and weighted)
+PointsLoessCIcartxlimW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
+                            aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
+  geom_smooth(method = "loess", alpha = 0.006, size = 0.25, color = "blue") +
+  geom_point(size = 0.25) +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  coord_cartesian(xlim = c(5400,4400), ylim = c(-0.5,0.8)) +
+  ggtitle("15p5 - Cartesian Trimmed - weighted") + xlab("Years calBP") + ylab("15p5") +
+  scale_x_reverse() +
+  theme_minimal()
+
+##Xlim (weighted)
+
+#Show Confidence Envelopes and Points (trimmed using xlim and weighted)
+PointsCIxlimextendW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
+                           aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
+  geom_smooth(method = "loess", linetype = 0, alpha = 0.006) +
+  geom_point(size = 0.25) +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  ggtitle("15p5 - Xlim Trimmed - weighted") + xlab("Years calBP") + ylab("15p5") +
+  coord_cartesian(ylim = c(-0.5,0.8)) +
+  scale_x_reverse(limits = c(5400,4400)) +
+  theme_minimal()
+
+#Show Confidence Envelopes and LOESS Regressions (trimmed using xlim and weighted)
+LoessCIxlimextendW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
+                          aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
+  geom_smooth(method = "loess", alpha = 0.006, size = 0.25, color = "blue") +
+   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  ggtitle("15p5 - Xlim Trimmed - weighted") + xlab("Years calBP") + ylab("15p5") +
+  coord_cartesian(ylim = c(-0.5,0.8)) +
+  scale_x_reverse(limits = c(5400,4400)) +
+  theme_minimal()
+
+#Show Confidence Envelopes, Points, and LOESS Regressions (trimmed using xlim and weighted)
+PointsLoessCIxlimextendW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
+                                aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
+  geom_smooth(method = "loess", alpha = 0.006, size = 0.25, color = "blue") +
+  geom_point(size = 0.25) +
+  geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.25, color = "red") +
+  ggtitle("15p5 - Xlim Trimmed - weighted") + xlab("Years calBP") + ylab("15p5") +
+  coord_cartesian(ylim = c(-0.5,0.8)) +
+  scale_x_reverse(limits = c(5400,4400)) +
+  theme_minimal()
 
 ##Save Unweighted Combined15p5 plot 
 pdf(file = here::here("figures/Combined15p5x4.pdf"))
@@ -539,20 +685,14 @@ gridExtra::grid.arrange(Plot15p5cartxlim,
                         ncol=2)
 dev.off()
 
-#This section is intended to automatically save and output the plots included in "plot_list"
+#Compare Trimmed, Cartesian Trim, Xlim, and weighted counterparts
+pdf(file = here::here("figures/CombinedCIx6.pdf"))
+gridExtra::grid.arrange(PointsLoessCItrim,
+                        PointsLoessCItrimW,
+                        PointsLoessCIcartxlim,
+                        PointsLoessCIcartxlimW,
+                        PointsLoessCIxlimextend,
+                        PointsLoessCIxlimextendW,
+                        ncol=2)
+dev.off()
 
-plot_list <-
-  c(
-    "skeletalhex519",
-    "skeletalhex519density",
-    "skeletalhex519_subfilter",
-    "skeletalhex519density_subfilter",
-    "skeletalhex519_subfilter2",
-    "skeletalhex519density_subfilter2"
-  )
-
-for(i in 1:length(plot_list)) {
-  # print(paste0("now saving ", plot_list[i]))
-  ggsave(filename=here::here(sprintf("figures/%s.pdf", plot_list[i])),
-         plot=get(plot_list[i]))
-}
