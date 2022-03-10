@@ -27,10 +27,14 @@ suppressWarnings(source('03-MC-aoristic-analysis.R'))
 suppressWarnings(source('04-plots.R'))
 ```
 
-```{r extras, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("06-extras.R"))}
-suppressWarnings(source('06-extras.R'))
+```{r sensitivity, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("05-sensitivity-analysis.R"))}
+suppressWarnings(source('05-sensitivity-analysis.R'))
 ```
 
-```{r tables, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("05-tables.R"))}
-suppressWarnings(source('05-tables.R'))
+```{r extras, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("07-extras.R"))}
+suppressWarnings(source('07-extras.R'))
+```
+
+```{r tables, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("06-tables.R"))}
+suppressWarnings(source('06-tables.R'))
 ```
