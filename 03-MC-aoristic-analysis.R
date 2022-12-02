@@ -36,7 +36,7 @@ colnames(skeletalsummary2)[12] <- "RunID" #renames the column containing the "i"
 
 #remove sampled Values not in Middle Jomon
 skeletalsummary_trim <- skeletalsummary2 %>%
-  filter(sampled < -4400 & sampled >= -5400)
+ filter(sampled < -4400 & sampled >= -5400)
 
 #Round values for aoristic analysis
 sampleround <- floor(skeletalsummary2$sampled/100) * 100

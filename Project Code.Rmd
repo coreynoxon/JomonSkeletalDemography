@@ -27,14 +27,22 @@ suppressWarnings(source('03-MC-aoristic-analysis.R'))
 suppressWarnings(source('04-plots.R'))
 ```
 
-```{r sensitivity, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("05-sensitivity-analysis.R"))}
-suppressWarnings(source('05-sensitivity-analysis.R'))
+```{r sensitivity-15p5, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("05-sensitivity-analysis-15p5.R"))}
+suppressWarnings(source('05-sensitivity-analysis-15p5.R'))
 ```
 
-```{r extras, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("07-extras.R"))}
-suppressWarnings(source('07-extras.R'))
+```{r sensitivity-range, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("06-sensitivity-analysis-range.R"))}
+suppressWarnings(source('06-sensitivity-analysis-range.R'))
 ```
 
-```{r tables, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("06-tables.R"))}
-suppressWarnings(source('06-tables.R'))
+```{r sensitivity-weight, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("07-sensitivity-analysis-weight.R"))}
+suppressWarnings(source('07-sensitivity-analysis-weight.R'))
+```
+
+```{r extras, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("09-extras.R"))}
+suppressWarnings(source('09-extras.R'))
+```
+
+```{r tables, include=FALSE, cache=TRUE, cache.extra=tools::md5sum(here::here("08-tables.R"))}
+suppressWarnings(source('08-tables.R'))
 ```
