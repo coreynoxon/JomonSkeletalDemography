@@ -6,4 +6,4 @@ library("ggpubr")
 library("here")
 
 #read in data
-skeletalDF <- read_csv("data/raw-data/MA Skeletal Data - Region 4 trim.csv", na = c("#VALUE!", "#N/A", "uk"))
+skeletalDF <- read_csv("data/raw-data/Skeletal Data - Region 4 trim.csv", na = c("#VALUE!", "#N/A", "uk"))

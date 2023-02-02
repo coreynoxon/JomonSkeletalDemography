@@ -10,7 +10,7 @@ skeletalclean <- skeletalDF %>%
   filter(!is.na(age_min_noxon) | !is.na(age_max_noxon)) %>%
   filter(age_min_noxon != "" | age_max_noxon != "") %>%
   select(master_id, region_number, site_name_dup_fix, site_name_rom, site_period_occurances, age_range, age_min_noxon,  age_max_noxon, over_5_values,
-         output_values_0_5, output_values_5_19, period_range, period_start, period_end, phase_start, phase_end)
+         output_values_0_5, output_values_5_19, period, period_start, period_end, phase_start, phase_end)
 
 #create percentages for 5-19 column
 skeletalclean <- skeletalclean %>%
