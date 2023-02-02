@@ -37,6 +37,6 @@ plot_list <-
 
 for(i in 1:length(plot_list)) {
   # print(paste0("now saving ", plot_list[i]))
-  ggsave(filename=here::here(sprintf("figures/plots/weight/%s.pdf", plot_list[i])),
+  ggsave(filename=here::here(sprintf("figures/sensitivity/weight/%s.pdf", plot_list[i])),
          plot=get(plot_list[i]))
 }

@@ -96,7 +96,7 @@ PointsLoessCIxlimextendW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_
 
 
 #Compare Cartesian Trim, Xlim, Extended Xlim, plots and their weighted counterparts viewing LOESS regressions
-pdf(file = here::here("figures/plots/range/CombinedLoessCIx6.pdf"))
+pdf(file = here::here("figures/sensitivity/range/CombinedLoessCIx6.pdf"))
 gridExtra::grid.arrange(LoessCIcartxlim,
                         LoessCIcartxlimW,
                         LoessCIxlim,
@@ -107,7 +107,7 @@ gridExtra::grid.arrange(LoessCIcartxlim,
 dev.off()
 
 #Compare Cartesian Trim, Xlim, Extended Xlim, plots and their weighted counterparts viewing points and LOESS regressions
-pdf(file = here::here("figures/plots/range/CombinedPointsLoessCIx6.pdf"))
+pdf(file = here::here("figures/sensitivity/range/CombinedPointsLoessCIx6.pdf"))
 gridExtra::grid.arrange(PointsLoessCIcartxlim,
                         PointsLoessCIcartxlimW,
                         PointsLoessCIxlim,
@@ -134,6 +134,6 @@ plot_list <-
 
 for(i in 1:length(plot_list)) {
   # print(paste0("now saving ", plot_list[i]))
-  ggsave(filename=here::here(sprintf("figures/plots/range/%s.pdf", plot_list[i])),
+  ggsave(filename=here::here(sprintf("figures/sensitivity/range/%s.pdf", plot_list[i])),
          plot=get(plot_list[i]))
 }

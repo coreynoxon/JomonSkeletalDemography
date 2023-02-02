@@ -324,7 +324,7 @@ Plot5p0alldatesW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_0_5)),
 
 
 ##Save Unweighted Combined15p5 plot 
-pdf(file = here::here("figures/sensitivity/Combined15p5x4.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined15p5x4.pdf"))
 gridExtra::grid.arrange(Plot15p5filter,
                         Plot15p5cartxlim,
                         Plot15p5xlimextend,
@@ -332,7 +332,7 @@ gridExtra::grid.arrange(Plot15p5filter,
                         ncol=2)
 dev.off()
 
-pdf(file = here::here("figures/sensitivity/Combined15p5x4_subfilter.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined15p5x4_subfilter.pdf"))
 gridExtra::grid.arrange(Plot15p5subfilter,
                         Plot15p5cartxlim_subfilter,
                         Plot15p5xlimextend_subfilter,
@@ -340,7 +340,7 @@ gridExtra::grid.arrange(Plot15p5subfilter,
                         ncol=2)
 dev.off()
 
-pdf(file = here::here("figures/sensitivity/Combined15p5x4_subfilter2.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined15p5x4_subfilter2.pdf"))
 gridExtra::grid.arrange(Plot15p5subfilter2,
                         Plot15p5cartxlim_subfilter2,
                         Plot15p5xlimextend_subfilter2,
@@ -348,28 +348,28 @@ gridExtra::grid.arrange(Plot15p5subfilter2,
                         ncol=2)
 dev.off()
 
-pdf(file = here::here("figures/sensitivity/Combined15p5x3.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined15p5x3.pdf"))
 gridExtra::grid.arrange(Plot15p5filter,
                         Plot15p5cartxlim,
                         Plot15p5xlimextend,
                         ncol=1)
 dev.off()
 
-pdf(file = here::here("figures/sensitivity/Combined15p5x3_subfilter.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined15p5x3_subfilter.pdf"))
 gridExtra::grid.arrange(Plot15p5subfilter,
                         Plot15p5cartxlim_subfilter,
                         Plot15p5xlimextend_subfilter,
                         ncol=1)
 dev.off()
 
-pdf(file = here::here("figures/sensitivity/Combined15p5x3_subfilter2.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined15p5x3_subfilter2.pdf"))
 gridExtra::grid.arrange(Plot15p5subfilter2,
                         Plot15p5cartxlim_subfilter2,
                         Plot15p5xlimextend_subfilter2,
                         ncol=1)
 dev.off()
 
-pdf(file = here::here("figures/sensitivity/Combined15p5x6.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined15p5x6.pdf"))
 gridExtra::grid.arrange(Plot15p5filter,
                         Plot15p5subfilter,
                         Plot15p5cartxlim,
@@ -379,7 +379,7 @@ gridExtra::grid.arrange(Plot15p5filter,
                         ncol=2)
 dev.off()
 
-pdf(file = here::here("figures/sensitivity/Combined15p5x6subfiltercompare.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined15p5x6subfiltercompare.pdf"))
 gridExtra::grid.arrange(Plot15p5subfilter,
                         Plot15p5subfilter2,
                         Plot15p5cartxlim_subfilter,
@@ -390,7 +390,7 @@ gridExtra::grid.arrange(Plot15p5subfilter,
 dev.off()
 
 #Save Weighted Combined15p5 plot 
-pdf(file = here::here("figures/sensitivity/Combined15p5x4W.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined15p5x4W.pdf"))
 gridExtra::grid.arrange(Plot15p5filterW,
                         Plot15p5cartxlimW,
                         Plot15p5xlimextendW,
@@ -399,7 +399,7 @@ gridExtra::grid.arrange(Plot15p5filterW,
 dev.off()
 
 
-pdf(file = here::here("figures/sensitivity/Combined15p5x3W.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined15p5x3W.pdf"))
 gridExtra::grid.arrange(Plot15p5filterW,
                         Plot15p5cartxlimW,
                         Plot15p5xlimextendW,
@@ -408,7 +408,7 @@ dev.off()
 
 
 ##Save Unweighted Combined5p0 plot
-pdf(file = here::here("figures/sensitivity/Combined5p0x4.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined5p0x4.pdf"))
 gridExtra::grid.arrange(Plot5p0filter,
                         Plot5p0cartxlim,
                         Plot5p0xlimextend,
@@ -417,7 +417,7 @@ gridExtra::grid.arrange(Plot5p0filter,
 dev.off()
 
 
-pdf(file = here::here("figures/sensitivity/Combined5p0x3.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined5p0x3.pdf"))
 gridExtra::grid.arrange(Plot5p0filter,
                         Plot5p0cartxlim,
                         Plot5p0xlimextend,
@@ -425,7 +425,7 @@ gridExtra::grid.arrange(Plot5p0filter,
 dev.off()
 
 ##Save Weighted Combined5p0 plot
-pdf(file = here::here("figures/sensitivity/Combined5p0x4W.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined5p0x4W.pdf"))
 gridExtra::grid.arrange(Plot5p0filterW,
                         Plot5p0cartxlimW,
                         Plot5p0xlimextendW,
@@ -433,7 +433,7 @@ gridExtra::grid.arrange(Plot5p0filterW,
                         ncol=2)
 dev.off()
 
-pdf(file = here::here("figures/sensitivity/Combined5p0x3W.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined5p0x3W.pdf"))
 gridExtra::grid.arrange(Plot5p0filterW,
                         Plot5p0cartxlimW,
                         Plot5p0xlimextendW,
@@ -441,7 +441,7 @@ gridExtra::grid.arrange(Plot5p0filterW,
 dev.off()
 
 ##Unweighted 15p5 and 5p0 comparison
-pdf(file = here::here("figures/sensitivity/Combined15p5_5p0.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined15p5_5p0.pdf"))
 gridExtra::grid.arrange(Plot5p0filter,
                         Plot15p5filter,
                         Plot5p0cartxlim,
@@ -452,7 +452,7 @@ gridExtra::grid.arrange(Plot5p0filter,
 dev.off()
 
 ##Weighted 15p5 and 5p0 comparison
-pdf(file = here::here("figures/sensitivity/Combined15p5_5p0W.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/Combined15p5_5p0W.pdf"))
 gridExtra::grid.arrange(Plot5p0filterW,
                         Plot15p5filterW,
                         Plot5p0cartxlimW,
@@ -464,7 +464,7 @@ dev.off()
 
 ##Compare weighted and subfilter plots
 
-pdf(file = here::here("figures/sensitivity/CompareWeightsFiltersXlim15p5x4.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/CompareWeightsFiltersXlim15p5x4.pdf"))
 gridExtra::grid.arrange(Plot15p5xlim,
                         Plot15p5xlimW,
                         Plot15p5xlim_subfilter,
@@ -472,7 +472,7 @@ gridExtra::grid.arrange(Plot15p5xlim,
                         ncol=2)
 dev.off()
 
-pdf(file = here::here("figures/sensitivity/CompareWeightsFiltersXlimExtend15p5x4.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/CompareWeightsFiltersXlimExtend15p5x4.pdf"))
 gridExtra::grid.arrange(Plot15p5xlimextend,
                         Plot15p5xlimextendW,
                         Plot15p5xlimextend_subfilter,
@@ -480,7 +480,7 @@ gridExtra::grid.arrange(Plot15p5xlimextend,
                         ncol=2)
 dev.off()
 
-pdf(file = here::here("figures/sensitivity/CompareWeightsFiltersCartXlim15p5x4.pdf"))
+pdf(file = here::here("figures/sensitivity/15p5/CompareWeightsFiltersCartXlim15p5x4.pdf"))
 gridExtra::grid.arrange(Plot15p5cartxlim,
                         Plot15p5cartxlimW,
                         Plot15p5cartxlim_subfilter,
