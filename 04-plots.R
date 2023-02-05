@@ -12,12 +12,12 @@ skeletalsummary2 <- readRDS(here::here("data/derived-data/skeletalsummary2.rds")
 #Show Confidence Envelopes and LOESS Regressions (trimmed using Cartesian coordinates and weighted)
 LoessCIcartxlimW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
                       aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
-  geom_smooth(method = "loess", span = 0.75, alpha = 0.006, size = 0.25, color = "blue") +
-   geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.6, color = "red") +
+  geom_smooth(method = "loess", span = 0.75, alpha = 0.006, size = 0.2, color = "blue") +
+  geom_hline(yintercept = 0.173, linetype = "dashed", size = 0.6, color = "red") +
   coord_cartesian(xlim = c(5400,4400), ylim = c(-0.5,0.8)) +
-  ggtitle("15p5") + xlab("Years calBP") + ylab("15p5") +
+  ggtitle("15p5 - 2000 sample runs") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse() +
-  theme_minimal()
+  theme_minimal(base_size = 15) 
 
 #Show Confidence Envelopes and LOESS Regressions (trimmed using Cartesian coordinates and weighted) - Run Limited Example
 LoessCIcartxlimW100 <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19) & RunID<50), 
@@ -27,9 +27,8 @@ LoessCIcartxlimW100 <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)
   coord_cartesian(xlim = c(5400,4400), ylim = c(-0.5,0.8)) +
   ggtitle("15p5 - 100 Sample Runs") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse() +
-  theme_minimal()
-
-
+  theme_minimal(base_size = 15)
+  
 #Show Confidence Envelopes, Points, and LOESS Regressions (trimmed using Cartesian coordinates and weighted)
 PointsLoessCIcartxlimW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_19)), 
                             aes(x = -sampled, y = ratio_5_19, group = RunID, weight = total_over_5)) +
@@ -39,7 +38,7 @@ PointsLoessCIcartxlimW <- ggplot(data = subset(skeletalsummary2, !is.na(ratio_5_
   coord_cartesian(xlim = c(5400,4400), ylim = c(-0.5,0.8)) +
   ggtitle("15p5 - Loess, Points, and CI") + xlab("Years calBP") + ylab("15p5") +
   scale_x_reverse() +
-  theme_minimal()
+  theme_minimal(base_size = 15)
 
 #This section is intended to automatically save and output the plots included in "plot_list"
 
